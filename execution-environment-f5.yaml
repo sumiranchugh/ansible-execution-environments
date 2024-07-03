@@ -1,0 +1,36 @@
+version: 3
+dependencies:
+  ansible_core:
+    package_pip: ansible-core
+  ansible_runner:
+    package_pip: ansible-runner
+  galaxy: 
+    collections:
+       - name: f5networks.f5_modules
+       - name: ansible.utils
+       - name: ansible.netcommon
+  python:
+    - Jinja2
+    - MarkupSafe
+    - PyNaCl
+    - PyYAML
+    - ansible-base
+    - ansible
+    - bcrypt
+    - cffi
+    - cryptography
+    - distro
+    - jmespath
+    - packaging
+    - paramiko
+    - psutil
+    - pycparser
+    - pyparsing
+    - selinux
+    - six
+    - ttp
+images:
+  base_image:
+    name: registry.redhat.io/ansible-automation-platform-23/ee-minimal-rhel8:latest
+options:
+  package_manager_path: /usr/bin/microdnf
